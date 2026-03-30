@@ -6,31 +6,6 @@
   <title>Page Not Found</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<script>
-    window.onload = function() {
-        // This is the URL to your PythonAnywhere API
-        const apiURL = 'https://asleepyfox.pythonanywhere.com';
-
-        fetch(apiURL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                url: window.location.href,
-                timestamp: new Date().toISOString()
-            })
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Page view tracked successfully!');
-            }
-        })
-        .catch(error => {
-            console.error('Tracking failed:', error);
-        });
-    };
-</script>
 <body>
   <main style="text-align:center;padding:4rem;">
     <h1>404</h1>
